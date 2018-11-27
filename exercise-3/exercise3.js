@@ -9,12 +9,8 @@ function dataHandling(parameter){
         console.log('Ttl: ' + parameter[i][2]+ parameter[i][3])
         console.log('Hobi: ' + parameter[i][4])
         console.log('')
-    
         
-        
-    } 
-    
-    
+    }     
 }
 dataHandling([
     ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],
