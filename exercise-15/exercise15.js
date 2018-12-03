@@ -1,26 +1,21 @@
 function groupAnimals(animals) {
-    result = []
-   for (i=0 ; i < animals.length ; i++){
-       var hurufA = []
-       var hurufC = []
-       var hurufK = []
-       var hurufU = []
-
-       for (j=0; j < animals.length ; j++){
-           if (animals[j][0]=== 'a'){
-               hurufA.push(animals[j])    
-           } else if(animals[j][0]==='k' ){
-               hurufK.push(animals[j])
-           } else if(animals[j][0]=== 'u' ){
-               hurufU.push(animals[j])
-           } else if(animals[j][0]=== 'c' ){
-            hurufC.push(animals[j])
-           }
-       }
-   }
-   result.push(hurufA,hurufC,hurufK,hurufU)
-   return result
-  }
+    var kamus = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+   // console.log(kamus[0])
+    var temp = []
+    var result = []
+    for ( var i = 0; i < kamus.length; i++){
+        for ( var j = 0; j < animals.length; j++){ 
+            if (animals[j][0] === kamus[i]){
+                  temp.push(animals[j])
+            }  
+        }
+        if ( temp.length > 0){
+            result.push(temp)
+        }
+        temp =[]       
+    }
+    return result
+}
   
   // TEST CASES
   console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
